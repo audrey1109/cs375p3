@@ -1,4 +1,8 @@
 # author: mbender
+"""
+a
+b
+"""
 def f(n):
     vals = [1, 1]
     while len(vals) <= n:
