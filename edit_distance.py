@@ -6,6 +6,7 @@ Samuel Offei
 edit_distance.py
 '''
 
+import datetime
 
 def bottom_up_edit_distance(string_1, string_2) :
     '''
@@ -113,16 +114,26 @@ def editDistance(S, T):
 
 if __name__ == "__main__" :
 
-    string_1 = "analysis"
-    string_2 = "algorithms"
+    string_1 = "qwertqwertqwert"
+    string_2 = "sawdssawdssawds"
 
-    # td =bottom_up_edit_distance(string1, string2)
+    time_td = datetime.datetime.now()
+    td = top_down_recursive(string_1, string_2)
+    total_td_time = datetime.datetime.now() - time_td
+
+    time_bu = datetime.datetime.now()
+    bu = bottom_up_edit_distance(string_1, string_2)
+    total_bu_time = datetime.datetime.now() - time_bu
+
+    print(f"time taken to complete top down recursive : {total_td_time}")
+    print(f"time taken to complete bottom up iterative : {total_bu_time}")
+
     # print("the correct answer is 18")
     # print(td[-1][-1])
 
-    instructions = file_comparator(string_1, string_2)
-    for instruction in instructions:
-        print(instruction)
+    # instructions = file_comparator(string_1, string_2)
+    # for instruction in instructions:
+    #     print(instruction)
 
 
 # def bud(string1, string2) :
