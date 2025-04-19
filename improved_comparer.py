@@ -119,7 +119,6 @@ def improved_comparer(lines1, lines2) :
     return output
 
 
-
 if __name__ == "__main__" :
 
     lines1, lines2 = get_lines("comparison_files/fib1.py", "comparison_files/fib2.py")
